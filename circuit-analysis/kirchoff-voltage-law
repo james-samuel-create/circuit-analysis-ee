@@ -1,1 +1,25 @@
 
+V = float(input("Enter supply voltage (V): "))
+
+R1 = float(input("Enter R1 (Ω): "))
+R2 = float(input("Enter R2 (Ω): "))
+R3 = float(input("Enter R3 (Ω): "))
+
+R_total = R1 + R2 + R3
+
+I = V / R_total
+
+V1 = I * R1
+V2 = I * R2
+V3 = I * R3
+
+print("\nResults")
+print("Total resistance =", R_total, "Ω")
+print("Circuit current =", I, "A")
+print("Voltage across R1 =", V1, "V")
+print("Voltage across R2 =", V2, "V")
+print("Voltage across R3 =", V3, "V")
+
+print("\nKVL check:")
+print("Sum of voltage drops =", V1 + V2 + V3, "V")
+print("Supply voltage =", V, "V")
